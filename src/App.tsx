@@ -34,7 +34,7 @@ export const App = () => {
     fetchTodos();
   }, [fetchTodos]);
 
-  const showTodoModal = (todo: Todo) => {
+  const handleSelectTodo = (todo: Todo) => {
     setSelectedTodo(todo);
   };
 
@@ -105,7 +105,7 @@ export const App = () => {
               ) : (
                 <TodoList
                   todos={displayedTodos}
-                  onSelect={showTodoModal}
+                  onSelect={handleSelectTodo}
                   selectedTodo={selectedTodo}
                 />
               )}
